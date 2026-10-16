@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.2px;
+}
+
+html {
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+body {
+    background: #fff;
+    color: #000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation */
+        .nav-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem 2rem;
+          max-width: 75rem;
+          margin: 0 auto;
+          position: sticky;
+          top: 0;
+          background: #fff;
+          z-index: 1000;
+          width: 100%;
+        }
+
+        .logo-title {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-weight: 700;
+          font-size: 1.25rem;
+        }
+
+        .logo img {
+          height: 1.25rem;
+          width: 1.25rem;
+        }
+
+        .nav-btn {
+          display: flex;
+          gap: 2rem;
+          font-size: 1rem;
+          font-weight: 500;
+        }
+
+        .nav-btn a {
+          color: #888888;
+          padding: 0.5rem 1rem;
+          border: 1px solid transparent;
+          border-radius: 9999px;
+          transition: all 0.2s ease-in-out;
+          text-decoration: none;
+        }
+
+        .nav-btn a:hover {
+          color: #000;
+          background: #fff;
+          border-color: #a0a0a0;
+        }
+
+        .login-signup-btn {
+          background-color: #D2EBC4;
+          border-radius: 9999px;
+          padding: 0.5rem 1rem;
+          font-size: 1rem;
+          font-weight: 500;
+          cursor: pointer;
+          transition: background-color 0.2s;
+          border: 1px solid black;
+        }
+
+        .login-signup-btn a {
+          color: #000;
+          text-decoration: none;
+        }
+
+        .login-signup-btn:hover {
+          background-color: #c4e0b2;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+  display: none; 
+        }
+
+/*
+ * 2. FAQ CONTENT STYLES
+ */
+
+.faqs-page-container {
+    max-width: 75rem;
+    margin: 0 auto;
+   
+    padding: 2rem 2rem 4rem;
+    text-align: center;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.heading h1 {
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 800;
+    line-height: 1.2;
+    max-width: 40rem;
+    margin: 10rem auto 10rem auto; 
+}
+
+.accordion-container {
+    max-width: 48rem;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.accordion-item {
+    margin-bottom: 0.75rem;
+    border: 1px solid #000000;
+    border-radius: 2rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-item.open {
+    border-color: #a0a0a0;
+}
+
+.accordion-header {
+    background-color: #c8e4ff;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    border-bottom: 1px solid transparent;
+}
+
+.accordion-item.open .accordion-header {
+    background-color: #fff;
+    border-bottom-color: #e0e0e0;
+    border-radius: 0.75rem 0.75rem 0 0;
+    box-shadow: none;
+}
+
+.accordion-header:hover {
+    background-color: #eef8ff;
+}
+
+.icon {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1;
+    transition: transform 0.3s;
+}
+
+.accordion-item.open .icon {
+    transform: rotate(45deg);
+    border-color: #888888;
+    color: #888888;
+}
+
+.accordion-content {
+    background-color: #fff;
+    max-height: 0; 
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    /* Only horizontal padding here to prevent content peeking */
+    padding: 0 1.5rem; 
+}
+
+.accordion-content p {
+    padding: 1rem 0 1.5rem 0; 
+    color: #000;
+    font-size: 0.95rem;
+}
+
+.accordion-item.open .accordion-content {
+    border-radius: 0 0 0.75rem 0.75rem;
+}
+
+
+/*
+ * 3. Media Queries for Responsiveness
+ */
+
+/* Tablet Responsive (max-width: 768px) */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 1rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .nav-btn {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .nav-btn a {
+        padding: 0.4rem 0.8rem;
+    }
+
+    .login-signup-btn {
+       padding: 0.4rem 0.8rem;
+       font-size: 0.9rem;
+    }
+
+    .faqs-page-container {
+        padding: 2rem 1rem 3rem;
+    }
+
+    .heading h1 {
+        margin-bottom: 2.5rem;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Mobile Responsive (max-width: 480px) */
+@media (max-width: 480px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .logo-title {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-btn {
+        width: 100%;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .login-signup-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .faqs-page-container {
+        padding: 1.5rem 1rem 2rem;
+    }
+
+    .heading h1 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        margin-bottom: 2rem;
+        margin-top: 0;
+    }
+
+    .accordion-header {
+        padding: 0.75rem 1rem;
+    }
+
+    .accordion-content p {
+        padding: 0 0 1rem 0;
+        font-size: 0.9rem;
+    }
+}

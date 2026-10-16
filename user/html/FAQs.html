@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReserveNU FAQs</title>
+    <!-- Links to the separate CSS file -->
+    <link rel="stylesheet" href="../css/faqs.css">
+</head>
+
+<body class="hide-scrollbar">
+
+    <div class="nav-container">
+        <div class="logo-title">
+            <div class="logo"><img src="../css/images/reserveNU_icon.png"></div>
+            <div class="title"><a href="index.html">ReserveNU</a></div>
+        </div>
+
+        <div class="nav-btn">
+            <div><a href="Features.html">Features</a></div>
+            <!-- Set current page as active -->
+            <div><a href="faqs.html" class="active" style="color: var(--color-dark-text); background-color: var(--color-white); border-color: #a0a0a0; border-width: 1px;">FAQs</a></div>
+            <div><a href="Contact.html">Contact Us</a></div>
+        </div>
+
+        <div class="login-signup-btn"> 
+            <a href="Select_Role.html">Log in / Sign up</a>
+        </div>
+    </div>
+
+    <div class="faqs-page-container">
+        <div class="heading">
+            <h1>Frequently Asked Questions</h1>
+        </div>
+
+        <div class="accordion-container">
+            <!-- FAQ Item 1: Open by default, styled like the image -->
+            <div class="accordion-item open">
+                <div class="accordion-header">
+                    <h4>How do I make a room reservation?</h4>
+                    <div class="icon">+</div>
+                </div>
+                <div class="accordion-content">
+                    <p>Reservations are made through the ReserveNU portal. Log in with your school credentials, navigate to the 'Rooms' section, select your desired date and time, and submit the purpose of your reservation. You will receive an email confirmation once approved.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h4>What types of rooms are available for booking?</h4>
+                    <div class="icon">+</div>
+                </div>
+                <div class="accordion-content">
+                    <p>We offer various types of rooms including standard classrooms, conference halls, computer laboratories, and specialized studio spaces. Each room listing provides details on capacity and available equipment.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h4>Is there a time limit for reservations?</h4>
+                    <div class="icon">+</div>
+                </div>
+                <div class="accordion-content">
+                    <p>Standard reservations are limited to a maximum of four hours. For longer events, please submit a special request form available on the main dashboard, which requires approval from the Facilities Department.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h4>Can I cancel or modify an existing reservation?</h4>
+                    <div class="icon">+</div>
+                </div>
+                <div class="accordion-content">
+                    <p>Yes, you can cancel a reservation up to 24 hours before the scheduled time directly through your user dashboard. Modifications (like changing time or date) require canceling the original booking and creating a new one.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h4>What should I do if the room is already occupied?</h4>
+                    <div class="icon">+</div>
+                </div>
+                <div class="accordion-content">
+                    <p>If you arrive at your reserved room and find it occupied, please politely show the occupants your confirmation email. If the issue persists, contact campus security or the administrative office immediately.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h4>Do I need special permission to book a large hall?</h4>
+                    <div class="icon">+</div>
+                </div>
+                <div class="accordion-content">
+                    <p>Reservations for halls with a capacity over 50 require pre-approval from the Student Affairs office, which you can request directly within the reservation form before submitting your final booking.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Links to the separate JavaScript file -->
+    <script>
+                // JavaScript for Accordion Functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                const content = item.querySelector('.accordion-content');
+
+                // Initial check: if the item has the 'open' class, set its max-height to show the content
+                if (item.classList.contains('open')) {
+                    // Measure the content's natural height and set max-height
+                    // We use setTimeout to ensure the content is rendered and scrollHeight is accurate
+                    setTimeout(() => {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }, 0);
+                }
+
+                header.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('open');
+
+                    // Close all other open items
+                    accordionItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('open')) {
+                            otherItem.classList.remove('open');
+                            otherItem.querySelector('.accordion-content').style.maxHeight = null;
+                        }
+                    });
+
+                    // Toggle the clicked item
+                    if (isOpen) {
+                        item.classList.remove('open');
+                        content.style.maxHeight = null; // Close
+                    } else {
+                        item.classList.add('open');
+                        // Open: Set max-height to the actual scroll height
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>

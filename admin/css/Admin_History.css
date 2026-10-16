@@ -1,0 +1,181 @@
+:root {
+    --primary-color: #C6E3FB;
+    --secondary-color: #D2EBC4;
+    --white-color: #F7F7F7;
+    --text-color: #131313;
+    --transparent-color: #1313137c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    height: 100%;
+    width: 220px;
+    padding: 0 0.9rem 0.9rem 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.trademark{
+    display: flex;
+    margin-left: 0.7rem;
+}
+
+.trademark h3 {
+    display: flex;
+    font-size: 1.3rem;
+    align-items: center;
+    padding: 0.7rem;
+}
+
+.trademark img {
+    width: 1.8rem;
+    height: auto;
+    margin-right: 0.5rem;
+}
+
+.navigationButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding-left: 1rem;
+    margin-top: 0.1rem;
+}
+
+.navigationButtons a {
+    display: flex;            
+    align-items: center;      
+    text-decoration: none;
+    padding: 0.7rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.navigationButtons img {
+    width: 1.3rem;
+    height: auto;
+    margin-right: 0.7rem;
+}
+
+.logOutButton {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-top: auto;
+}
+
+.logOutButton a {
+    display: flex;            
+    align-items: center;      
+    text-decoration: none;
+    padding: 0.7rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.logOutButton img {
+    width: 1.3rem;
+    height: auto;
+    margin-right: 0.7rem;
+}
+
+.main-content {
+    background-color: var(--primary-color);
+    flex: 1;
+    margin: 0 0 2rem 0;
+}
+
+.main-box {
+    background-color: var(--white-color);
+    margin: 1rem;
+    border-radius: 2rem;
+    border: solid 1px var(--text-color);
+    height: 100%;
+    overflow: scroll;
+    scrollbar-width: none;      
+    -ms-overflow-style: none;
+}
+
+.nain-box::-webkit-scrollbar { 
+    display: none;
+}
+
+.header {
+    margin: 0 2rem 0 2rem;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 4rem 1rem 4rem;
+}
+
+.filter-btn {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--text-color);
+    border-radius: 50px;
+    padding: 0.3rem 0.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 120px;
+}
+
+.details-btn {
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    border: 1px solid var(--text-color);
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 3px 5px 3px 5px;
+    font-weight: bold;
+}
+
+.recent-history, .earlier-history {
+    margin: 0 2rem 0 0rem;
+}
+
+.recent-history h3, .earlier-history h3 {
+    margin-left: 3rem;
+}
+
+.recent-history li, .earlier-history li {
+    list-style: none;
+    background-color: #E6EBEF;
+    margin: 0.6rem 0 0.6rem 0;
+    padding: 0.9rem;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recent-history li button, .earlier-history li button {
+    border: 1px solid var(--text-color);
+    border-radius: 50px;
+    padding: 0.4rem 0.7rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+}

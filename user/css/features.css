@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.2px;
+}
+
+html {
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+body {
+    background: #fff;
+    color: #000;
+    min-height: 100vh; /* Ensures the body is at least the full viewport height */
+    display: flex; 
+    flex-direction: column; /* Stacks children (nav, main content) vertically */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation */
+        .nav-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem 2rem;
+          max-width: 75rem;
+          margin: 0 auto;
+          position: sticky;
+          top: 0;
+          background: #fff;
+          z-index: 1000;
+          width: 100%;
+        }
+
+        .logo-title {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-weight: 700;
+          font-size: 1.25rem;
+        }
+
+        .logo img {
+          height: 1.25rem;
+          width: 1.25rem;
+        }
+
+        .nav-btn {
+          display: flex;
+          gap: 2rem;
+          font-size: 1rem;
+          font-weight: 500;
+        }
+
+        .nav-btn a {
+          color: #888888;
+          padding: 0.5rem 1rem;
+          border: 1px solid transparent;
+          border-radius: 9999px;
+          transition: all 0.2s ease-in-out;
+          text-decoration: none;
+        }
+
+        .nav-btn a:hover {
+          color: #000;
+          background: #fff;
+          border-color: #a0a0a0;
+        }
+
+        .login-signup-btn {
+          background-color: #D2EBC4;
+          border-radius: 9999px;
+          padding: 0.5rem 1rem;
+          font-size: 1rem;
+          font-weight: 500;
+          cursor: pointer;
+          transition: background-color 0.2s;
+          border: 1px solid black;
+        }
+
+        .login-signup-btn a {
+          color: #000;
+          text-decoration: none;
+        }
+
+        .login-signup-btn:hover {
+          background-color: #c4e0b2;
+        }
+
+/* === MAIN CONTENT === */
+.landing-pg-container {
+    max-width: 75rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem 2rem 3rem;
+    width: 100%;
+    /* Flex properties to grow and center content */
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.heading h1 {
+    font-size: clamp(2rem, 4vw, 2.91rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 auto 5rem;
+    max-width: 60rem;
+}
+
+/* Feature Boxes */
+.box-group {
+    display: flex;
+    justify-content: center;
+    gap: 5rem; 
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.box-group > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 12rem;
+}
+
+.box {
+    background-color: #c8e4ff;
+    border-radius: 1.1rem;
+    border: 1px solid black;
+    width: 7.5rem;
+    height: 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.box img {
+    width: 80px;
+    height: 80px;
+}
+
+.box-group p {
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+}
+
+/* Get Started Button */
+.get-started-btn {
+    margin-top: 2rem;
+}
+
+.get-started-btn a {
+    background-color: #D2EBC4;
+    border-radius: 9999px;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: inline-block;
+}
+
+.get-started-btn a:hover {
+    background-color: #c4e0b2;
+}
+
+/* === CONSOLIDATED RESPONSIVE SECTION === */
+
+/* Tablet Responsive */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 1rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .nav-btn {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .nav-btn a {
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .login-signup-btn {
+       padding: 0.4rem 0.8rem;
+       font-size: 0.9rem;
+    }
+
+    .landing-pg-container {
+        padding: 2rem 1rem 3rem;
+        flex-grow: 1;
+    }
+
+    .heading h1 {
+        margin-bottom: 2.5rem;
+    }
+
+    .box-group {
+        gap: 2.5rem;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 520px) { 
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .logo-title {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-btn {
+        width: 100%;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .login-signup-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .landing-pg-container {
+        padding: 1.5rem 1rem 2rem;
+    }
+
+    .heading h1 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        margin-bottom: 2rem;
+    }
+
+    .box-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .box-group > div {
+        width: 100%;
+        max-width: 16rem;
+    }
+
+    .get-started-btn a {
+        padding: 0.65rem 1.5rem;
+        font-size: 1rem;
+    }
+}

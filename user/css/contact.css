@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* Base Styles (Consistent with features.css) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.2px;
+}
+
+html {
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+body {
+    background: #fff; 
+    color: #000;
+    min-height: 100vh;
+    display: flex; 
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*
+ * 1. Navigation Bar Styling (Consistent with features.css)
+ */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem; 
+    max-width: 75rem;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    background: #fff; 
+    z-index: 1000;
+    width: 100%;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.logo img {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+/* Navigation */
+        .nav-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem 2rem;
+          max-width: 75rem;
+          margin: 0 auto;
+          position: sticky;
+          top: 0;
+          background: #fff;
+          z-index: 1000;
+          width: 100%;
+        }
+
+        .logo-title {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-weight: 700;
+          font-size: 1.25rem;
+        }
+
+        .logo img {
+          height: 1.25rem;
+          width: 1.25rem;
+        }
+
+        .nav-btn {
+          display: flex;
+          gap: 2rem;
+          font-size: 1rem;
+          font-weight: 500;
+        }
+
+        .nav-btn a {
+          color: #888888;
+          padding: 0.5rem 1rem;
+          border: 1px solid transparent;
+          border-radius: 9999px;
+          transition: all 0.2s ease-in-out;
+          text-decoration: none;
+        }
+
+        .nav-btn a:hover {
+          color: #000;
+          background: #fff;
+          border-color: #a0a0a0;
+        }
+
+        .login-signup-btn {
+          background-color: #D2EBC4;
+          border-radius: 9999px;
+          padding: 0.5rem 1rem;
+          font-size: 1rem;
+          font-weight: 500;
+          cursor: pointer;
+          transition: background-color 0.2s;
+          border: 1px solid black;
+        }
+
+        .login-signup-btn a {
+          color: #000;
+          text-decoration: none;
+        }
+
+        .login-signup-btn:hover {
+          background-color: #c4e0b2;
+        }
+
+
+/*
+ * 2. Contact Page Content Styling
+ */
+
+.landing-pg-container {
+    max-width: 75rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem 2rem 3rem; 
+    width: 100%;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.heading h1 {
+    font-size: clamp(2rem, 4vw, 2.91rem);
+    font-weight: 800;
+    line-height: 1.2;
+    max-width: 60rem;
+    margin: 0 auto 5rem; 
+}
+
+/* Contact Group Container */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 5rem; 
+    margin-bottom: 3rem; 
+    flex-wrap: wrap;
+}
+
+/* Individual Contact Group (grp1, grp2, grp3) */
+.contact-container > div[class^="grp"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 15rem;
+    flex: 0 0 auto; 
+}
+
+/* Individual Contact Icon Box Styles (box-1, box-2, box-3) */
+.contact-container > div[class^="grp"] > div[class^="box"] {
+    background-color: #c8e4ff;
+    border-radius: 1.1rem;
+    border: 1px solid black; 
+    width: 7.5rem;      
+    height: 7.5rem;     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Styling for the icons/images */
+.contact-container img {
+    width: 80px; 
+    height: 80px;
+    object-fit: contain;
+}
+
+/* Contact Group Title (VISIT US, CALL US, CONTACT US) */
+.contact-container > div[class^="grp"] > p {
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 0.5rem; 
+}
+
+/* Contact Description Paragraph */
+.contact-container .desc-1 p {
+    font-size: 1rem; 
+    line-height: 1.4;
+    font-weight: 500;
+    
+    color: #888888;
+    margin-bottom: 2rem; 
+}
+
+/* Final Contact Link Button Styles */
+.contact-link a.link-btn {
+    display: inline-block;
+    padding: 0.6rem 1rem; 
+    border: 1px solid #c4c4c4;
+    border-radius: 99px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #000; 
+    transition: all 0.2s;
+}
+
+.contact-link a.link-btn:hover {
+    border-color: #000;
+    background-color: #D2EBC4;
+}
+
+
+/*
+ * 3. Media Queries for Responsiveness
+ */
+
+/* Tablet Responsive (max-width: 768px) */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 1rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .nav-btn {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .nav-btn a {
+        padding: 0.4rem 0.8rem;
+    }
+
+    .login-signup-btn {
+       padding: 0.4rem 0.8rem;
+       font-size: 0.9rem;
+    }
+
+    .landing-pg-container {
+        padding: 2rem 1rem 3rem;
+    }
+
+    .heading h1 {
+        margin-bottom: 2.5rem;
+    }
+
+    .contact-container {
+        gap: 2.5rem;
+    }
+}
+
+/* Mobile Responsive (max-width: 520px) */
+@media (max-width: 520px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .logo-title {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-btn {
+        width: 100%;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .login-signup-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .landing-pg-container {
+        padding: 1.5rem 1rem 2rem;
+    }
+
+    .heading h1 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        margin-bottom: 2rem;
+    }
+    
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .contact-container > div[class^="grp"] {
+        width: 100%;
+        max-width: 16rem;
+    }
+}

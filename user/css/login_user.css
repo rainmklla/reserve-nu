@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { font-size: clamp(12px, 1vw, 16px); overflow-x: hidden; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.2px;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.main-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(8px, 2vw, 20px);
+}
+
+.login-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(184px, 20vw, 340px);
+  width: 100%;
+  max-width: min(95vw, 1400px);
+  padding: clamp(16px, 3vw, 40px) clamp(8px, 2vw, 20px);
+}
+
+.green-box {
+  width: clamp(240px, 35vw, 550px);
+  height: clamp(320px, 40vw, 650px);
+  background-color: rgba(210, 235, 196, 1);
+  border: 1px solid rgba(19, 19, 19, 1);
+  border-radius: clamp(12px, 1.5vw, 20px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bully {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: clamp(288px, 30vw, 450px);
+  flex-shrink: 1;
+  margin: 0;
+}
+
+.login-link p, 
+.login-link h2 {
+  font-size: clamp(13px, 1vw, 20px);
+  text-align: right;
+  margin-bottom: clamp(8px, 1vw, 16px);
+}
+
+.login-link h2 {
+  font-size: clamp(24px, 4vw, 56px);
+  text-align: left;
+  font-weight: bold;
+  margin: clamp(24px, 4vw, 60px) 0 clamp(16px, 2vw, 30px) 0;
+}
+
+.login-link a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+.login-form h6 {
+  font-size: clamp(12px, 1vw, 16px);
+  font-weight: bold;
+  margin: clamp(10px, 1vw, 20px) 0 clamp(8px, 0.8vw, 10px) 0;
+}
+
+.input-group {
+  margin-bottom: clamp(12px, 1.5vw, 20px);
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  font-size: clamp(14px, 1.2vw, 18px);
+  padding: clamp(12px, 2vw, 16px) clamp(14px, 2vw, 20px);
+  border: 1px solid #808080;
+  border-radius: clamp(20px, 3vw, 35px);
+  font-family: 'Inter', sans-serif;
+  color: #000;
+  background-color: #fff;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+  outline: none;
+  border-color: #000;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.options-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: clamp(12px, 1.8vw, 25px);
+  font-size: clamp(12px, 1vw, 16px);
+}
+
+.stay-signed-in {
+  display: flex;
+  align-items: center;
+  color: #000;
+}
+
+.stay-signed-in input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-right: clamp(8px, 1vw, 14px);
+  margin-top: clamp(1px, 0.2vw, 2px);
+  min-width: clamp(18px, 2vw, 22px);
+  width: clamp(18px, 2vw, 22px);
+  height: clamp(18px, 2vw, 22px);
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  position: relative;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.stay-signed-in input[type="checkbox"]:checked {
+  background-color: rgba(210, 235, 196, 1);
+  border-color: #acacac;
+}
+
+.stay-signed-in input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 7px;
+  width: 4px;
+  height: 12px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.forgot-password-link {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.forgot-password-link:hover { text-decoration: none; }
+
+.login-verify-btn {
+  display: block;
+  margin: clamp(8px, 1vw, 14px) auto 0 auto;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid rgba(19, 19, 19, 1);
+  border-radius: clamp(18px, 2vw, 35px);
+  font-size: clamp(15px, 2vw, 20px);
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  width: clamp(150px, 20vw, 240px);
+  min-width: 120px;
+  height: clamp(40px, 5vw, 60px);
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.1s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-verify-btn:hover { box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); transform: translateY(-1px);}
+.login-verify-btn:active { transform: translateY(0); }
+
+.signup-link {
+  text-align: center;
+  font-size: clamp(13px, 1vw, 16px);
+  color: #000;
+  margin-top: clamp(12px, 1.5vw, 20px);
+}
+
+.signup-link a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.signup-link a:hover { text-decoration: none; }
+
+.login-form p[style*="color:red"],
+.login-form p[style*="color:green"] {
+  padding: clamp(8px, 1vw, 14px) clamp(12px, 2vw, 18px);
+  border-radius: clamp(8px, 1vw, 14px);
+  margin-bottom: clamp(8px, 1vw, 14px);
+  font-size: clamp(13px, 1vw, 16px);
+}
+
+.login-form p[style*="color:red"] { background: #ffebee; }
+.login-form p[style*="color:green"] { background: #e8f5e9; }
+
+@media (max-width: 1024px) {
+  .login-container { gap: clamp(32px, 5vw, 64px);}
+}
+@media (max-width: 900px) {
+  .login-container { gap: clamp(24px, 3.5vw, 40px);}
+}
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    gap: clamp(18px, 2vw, 30px);
+    padding: clamp(12px, 2vw, 20px) clamp(8px, 2vw, 15px);
+  }
+  .green-box, .login-form {
+    width: min(95vw, 430px);
+    max-width: 430px;
+  }
+}
+@media (max-width: 480px) {
+  .login-container, .green-box, .login-form {
+    min-width: 0; width: 100vw; max-width: 100vw; padding: clamp(8px, 2vw, 18px);
+  }
+  .green-box {
+    height: clamp(140px, 30vw, 220px);
+    border-radius: clamp(9px, 1vw, 15px);
+  }
+  .login-link h2 { font-size: clamp(18px, 5vw, 26px); text-align: center;}
+  .login-form input[type], .login-form input[type="password"] { font-size: clamp(13px, 3vw, 16px); padding: clamp(8px, 4vw, 16px);}
+  .login-verify-btn { width: 90vw; min-width: 0; font-size: clamp(14px, 3vw, 19px); height: clamp(36px, 6vw, 54px);}
+}
+@media (max-width: 360px) {
+  .green-box { height: clamp(110px, 20vw, 160px); border-radius: clamp(7px, 0.8vw, 11px);}
+  .login-link h2 { font-size: clamp(15px, 4vw, 21px);}
+  .login-form, .login-container { padding: clamp(4px, 1vw, 8px);}
+}

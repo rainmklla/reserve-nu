@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.2px;
+}
+
+.outer-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 630px;
+    padding: 30px ;
+    background-color: #F7F7F7;
+    border: 1px solid rgb(42, 42, 42);
+    border-radius: 30px;
+    box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.outer-box h2 {
+    font-size: 3.5em;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    color: #000000;
+}
+
+
+
+.login-options {
+    display: flex;
+    gap: 50px; 
+}
+
+
+.login-options p {
+    font-size: 1.2em;
+    font-weight: bolder;
+    padding-bottom: 30px;
+
+    margin-top: 0; 
+    margin-bottom: 0; 
+    color: #000000;
+}
+
+
+
+.admin-box,
+.user-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 130px;
+
+    border: 1px solid rgb(42, 42, 42);
+    border-radius: 25px;
+    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    margin-bottom: 45px;
+    padding: 20px;
+    
+}
+
+.admin-box {
+    background-color: #C6E3FB; 
+}
+
+.user-box {
+    background-color: #D2EBC4;
+}
+
+.admin-box:hover,
+.user-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    width: 5em;  
+    height: auto; 
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+
+
+.admin-btn, .user-btn {
+    text-decoration: none;
+}

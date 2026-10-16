@@ -1,0 +1,5 @@
+/vendor/
+/admin/php/credentials.json
+/admin/php/token.json
+/uploads/*
+!/uploads/.gitkeep
